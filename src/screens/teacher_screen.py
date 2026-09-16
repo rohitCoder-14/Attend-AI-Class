@@ -11,7 +11,8 @@ from src.pipelines.face_pipeline import predict_attendance
 import numpy as np
 import pandas as pd
 from src.database.config import supabase
-from datetime import datetime
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from src.components.dialog_attendance_results import attendance_result_dialog
 from src.components.dialog_voice_attendance import voice_attendance_dialog
 
@@ -154,8 +155,9 @@ def teacher_tab_take_attendance():
                 else:
 
                     results, attendance_to_log  = [], []
-
-                    current_timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+                    
+                    current_timestamp = datetime.now(timezone.utc).isoformat()
+                    # current_timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
 
                     for node in enrolled_students:
@@ -238,7 +240,8 @@ def teacher_tab_attendance_records():
 
         data.append({
             "ts_group": ts.split(".")[0] if ts else None,
-            "Time": datetime.fromisoformat(ts).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
+            "Time": datetime.fromisoformat(ts.replace("Z", "+00:00")).astimezone(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
+            # "Time": datetime.fromisoformat(ts).strftime("%Y-%m-%d %I:%M %p") if ts else "N'A",
             "Subject": r['subjects']['name'],
             "Subject Code":r['subjects']['subject_code'],
             "is_present": bool(r.get('is_present', False))
