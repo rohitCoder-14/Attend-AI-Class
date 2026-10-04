@@ -371,7 +371,7 @@ See the [`LICENSE`](LICENSE) file for more information.
 
 ### Rohit Singh Rawat
 
-🎓 **MCA — Data Science**
+🎓 **MCA — AI & Data Science**
 
 <p>
   <a href="https://github.com/rohitCoder-14">
