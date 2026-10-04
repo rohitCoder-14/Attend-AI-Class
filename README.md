@@ -367,11 +367,20 @@ See the [`LICENSE`](LICENSE) file for more information.
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-**Rohit Singh Rawat**
+### Rohit Singh Rawat
 
-Built with Python, Streamlit, Machine Learning, Computer Vision, and Speech Recognition.
+🎓 **MCA — Data Science**
+
+<p>
+  <a href="https://github.com/rohitCoder-14">
+    <img src="https://img.shields.io/badge/GitHub-rohitCoder--14-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+  <a href="https://www.linkedin.com/in/rohit-singh-rawat1407/">
+    <img src="https://img.shields.io/badge/LinkedIn-Rohit%20Singh%20Rawat-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</p>
 
 ---
 
